@@ -34,7 +34,7 @@ def run(source_path):
 
     spark_df.write \
     .format("delta") \
-    .mode("overwrite") \
+    .mode("append") \
     .saveAsTable("workspace.bronze.social_media_engagement_bronze")
 
 
